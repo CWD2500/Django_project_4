@@ -1,0 +1,16 @@
+<h1> ProFile  </h1>
+
+
+
+{% if request.user.is_authenticated %}
+{{request.user.first_name}}<br>
+{{request.user.last_name}}<br>
+{{request.user.email}}<br>
+<br>
+<img src="{{request.user.profile.avater.url}}" />
+
+<br>
+    
+{% endif %}
+    
+<a href="{% url 'logout' %}">  Log Out </a>

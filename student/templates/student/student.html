@@ -1,0 +1,26 @@
+
+
+{% extends 'main.html'  %}
+
+{%  block content %}
+
+
+        <h1>All Student </h1>
+        <a  href="{%  url 'student:addStudent' %}" > Add Student  </a>
+        <h2>Full Name : {{fName|upper}}  {{lName|lower }}</h2>
+        
+        {% for  items    in mylist  %}
+        <h2>myList :{{items}}</h2>
+        
+        
+        {% empty %}
+        
+        <p>This is  Items Empty</p>
+        {% endfor %}
+            
+       
+        <h2>Python :{{mydict.python|length}}   </h2>
+        <h2>PHP : {{mydict.PHP| lower | capfirst}} </h2>
+
+
+{% endblock %}

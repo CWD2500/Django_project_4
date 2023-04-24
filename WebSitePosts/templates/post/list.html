@@ -1,0 +1,22 @@
+<h1> List </h1>
+
+<br>
+<a href="{% url 'create' %}"> Create</a>
+
+
+
+{% if posts %}
+    
+
+    
+{% for items in posts %}
+
+<a href="{% url 'details' items.id %}"> {{items.title}}</a>
+<a href="{% url 'update' items.id %}">  Update</a>
+<a href="{% url 'delete' items.id %}"> Delete</a><br><br>
+
+{% endfor %}
+
+{% else %}
+<h1> Sorry No pending Posts<h1>
+{% endif %}

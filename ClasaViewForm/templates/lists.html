@@ -1,0 +1,22 @@
+
+
+<h1> Hello Christiane :)  </h1>
+
+ <a href="{%  url 'created'    %}"> Create Page  </a>
+
+ <ul>
+    
+    {% for items in object_list  %}
+        
+    <li>  <a href="{% url 'detail'  items.id %}" >  Full Name :  {{items.name}}</a>    </li>
+            
+    <li> <a href="{% url 'detail' items.id %}" >    Age Employees :  {{items.age}} </a></li>
+            
+    <li>  <a href="{% url 'detail' items.id  %}" >   Level  Employess :  {{items.level}}</a> </li>
+    ----------------------------------------
+    {% empty %}
+    no Thing
+
+    {% endfor %}
+
+ </ul>

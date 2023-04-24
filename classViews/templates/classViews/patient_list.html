@@ -1,0 +1,12 @@
+<h1> Patient List </h1>
+
+<ul>
+    
+    {% for items in patient_lists  %}
+        <li>  Frist Name :  {{items.firstName}} 
+            <a href="/home/patientDetailView/{{items.id}}"> Show</a>   </li>
+            <a href="/home/patientUpdateView/{{items.id}}"> Edit</a>   </li>
+            <a href="/home/PatientDeleteView/{{items.id}}"> Delete</a>   </li>
+    {% endfor %}
+        
+</ul>

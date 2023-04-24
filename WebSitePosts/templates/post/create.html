@@ -1,0 +1,13 @@
+
+
+
+
+<h1>Form</h1>
+
+<br>
+<form  method="post" enctype="mulitpart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    
+    <input type="submit" class="btn btn-block"  value="create">
+</form> 

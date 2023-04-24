@@ -1,0 +1,9 @@
+<h1> Patient Details Are your Sure ? </h1>
+
+{{patient}}
+
+<form method="post">
+    {% csrf_token %} 
+    
+    <input type="submit" value="Delete">
+</form>
